@@ -110,3 +110,97 @@ echo '</pre>';
 </body>
 
 </html>
+
+<!-- CORRECTION -->
+
+<?php
+
+$tab = array(
+    array(
+    'nom' => 'durant',
+    'prenom' => 'loic',
+    'age' => 29,
+    'metier' => 'webmaster',
+    'site' => 'openclassrooms',
+    'lien' => 'https://www.openclassrooms.com/',
+    ),
+    array(
+        'nom' => 'durant',
+        'prenom' => 'loic',
+        'age' => 29,
+        'metier' => 'webmaster',
+        'site' => 'openclassrooms',
+        'lien' => 'https://www.openclassrooms.com/',
+    ),
+    array(
+        'nom' => 'durant',
+        'prenom' => 'loic',
+        'age' => 29,
+        'metier' => 'webmaster',
+        'site' => 'openclassrooms',
+        'lien' => 'https://www.openclassrooms.com/',
+    ),
+);
+
+echo '<pre>';
+print_r($tab);
+echo'</pre>';
+
+?>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jolie tableau</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 2px solid black;
+            color: #fff;
+            text-align: center;
+            width: 500px;
+            margin: auto;
+            font-size: 20px;
+            background: red;
+        }
+        th, td {
+            border: 1px solid black;
+        }
+        th {
+            background-color: #000;
+            color: #fff;
+            text-transform: uppercase;
+        }
+        tr:hover {
+            background: #000;
+            color: #fff
+        }
+        a {
+            color: #fff;
+        }
+        a:hover {
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <?php
+    echo '<table><tr><th>Nom</th><th>Prénom</th><th>Age</th><th>Profession</th><th>Site web</th></tr>';
+    foreach ($tab as $values) {
+        echo '<tr>';
+            echo '<td>'.$values['nom'].'</td>';
+            echo '<td>'.$values['prenom'].'</td>';
+            echo '<td>'.$values['age'].'</td>';
+            echo '<td>'.$values['metier'].'</td>';
+            echo '<td><a href="'.$values['lien'].'" target="_blank">'.$values['site'].'</a></td>';
+        echo '</tr>';
+    }
+
+    echo '</table>';
+    ?>
+</body>
+
+</html>
